@@ -1,5 +1,10 @@
+import user from '../user.json';
+
+
+
 export const App = () => {
   return (
+    
     // <div
     //   style={{
     //     height: '100vh',
@@ -42,6 +47,8 @@ export const App = () => {
 </div>
   );
 };
+
+
 
 
 
