@@ -1,54 +1,47 @@
-import user from '../user.json';
-
+import user from './Profile/user.json';
+import data from './Statistics/data.json';
+import friends from './FriendList/friends';
+import PropTypes from "prop-types";
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
 
 
 export const App = () => {
+ 
   return (
-    
-    // <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#010101'
-    //   }}
-    // >
-    //   React homework template2
-    // </div>
-    //------------------------
-    <div class="profile">
-  <div class="description">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-      class="avatar"
-    />
-    <p class="name">Petra Marica</p>
-    <p class="tag">@pmarica</p>
-    <p class="location">Salvador, Brasil</p>
-  </div>
-
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
-    </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">2000</span>
-    </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">3000</span>
-    </li>
-  </ul>
-</div>
+    <div>
+     <Profile
+  username={user.username}
+  tag={user.tag}
+  location={user.location}
+  avatar={user.avatar}
+      stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      
+      <FriendList friends={friends} />;
+    </div>
   );
 };
 
 
 
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  // price: PropTypes.number.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.string.isRequired,
+};
 
+Statistics.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.string.isRequired,
+};
 
+FriendList.propTypes = {
+  friends: PropTypes.string.isRequired,
+};
