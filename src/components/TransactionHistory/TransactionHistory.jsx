@@ -1,4 +1,4 @@
-export const TransactionHistory = () => (
+export const TransactionHistory = ( transactions) => (
     <table class="transaction-history">
   <thead>
     <tr>
@@ -8,17 +8,21 @@ export const TransactionHistory = () => (
     </tr>
   </thead>
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
+        <tbody>
+            
+                 {
+                    console.log(transactions)
+                }
+             {/* {transactions.map((item) => (
+                console.log(item.type)
+                
+             ))}  */}
   </tbody>
 </table>
 );
+
+/* <tr>
+                     <td>1</td>
+                     <td>2</td>
+                     <td>3</td>
+                 </tr> */

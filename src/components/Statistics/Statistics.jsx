@@ -3,6 +3,7 @@ export const Statistics = ({ title, stats }) => (
         { title ? <h2 class="title">{title}</h2>: "" }
 
         <ul class="stat-list">
+            {/* { console.log(stats)} */}
             {stats.map(item => (
                 <li key={item.id} class="item" >
                     <span class="label" >{item.label}</span>
