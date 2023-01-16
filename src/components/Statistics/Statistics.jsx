@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const getRandomHexColor = () =>
   '#' + Math.floor(Math.random() * 16777215).toString(16);
 
-export const Statistics = ({ title, stats }) => (
+const Statistics = ({ title, stats }) => (
   <section className={css.statistics}>
     {title && <h2 className={css.title}>{title}</h2>}
     <ul className={css.statlist}>
@@ -32,3 +32,5 @@ Statistics.propTypes = {
     }).isRequired
   ).isRequired,
 };
+
+export default Statistics;

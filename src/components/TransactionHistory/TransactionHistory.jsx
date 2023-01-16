@@ -1,7 +1,7 @@
 import css from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
 
-export const TransactionHistory = ({ items }) => (
+const TransactionHistory = ({ items }) => (
   <table className={css.transactionhistory}>
     <thead>
       <tr>
@@ -32,3 +32,5 @@ TransactionHistory.propTypes = {
     }).isRequired
   ).isRequired,
 };
+
+export default TransactionHistory;

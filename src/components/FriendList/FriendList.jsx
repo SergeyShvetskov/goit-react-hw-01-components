@@ -1,7 +1,7 @@
 import css from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendList = ({ friends }) => (
+const FriendList = ({ friends }) => (
   <ul className={css.friendlist}>
     {friends.map(({ id, avatar, name, isOnline }) => (
       <li key={id} className={css.item}>
@@ -23,3 +23,5 @@ FriendList.propTypes = {
     })
   ).isRequired,
 };
+
+export default FriendList;
