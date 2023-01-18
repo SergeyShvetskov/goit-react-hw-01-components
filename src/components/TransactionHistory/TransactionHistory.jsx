@@ -22,6 +22,9 @@ const TransactionHistory = ({ items }) => (
   </table>
 );
 
+TransactionHistory.defaultProps = {
+  items: [],
+};
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
